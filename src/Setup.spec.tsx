@@ -32,5 +32,9 @@ describe("App component", () => {
 
     // Verifica se a mensagem mudou após o clique no botão
     expect(screen.getByText(/mudei a frase/i)); 
+
+    const oldMessage = screen.queryByText("Let's learn more about testing in React")
+
+    expect(oldMessage).toBeNull()
   });
 });
